@@ -2,4 +2,224 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: "IBM Plex Mono", sans-serif;
+  background-image: var(--background-image);
+  background-position: center;
+  background-attachment: fixed;
 }
+
+.header {
+  display: grid;
+  grid-template-rows: 26px, 98px, 1fr, 117px, 25px;
+ /*  position: relative; */
+}
+
+.header::before {
+  content: "";
+  display: block;
+  margin: 10px 10px 40px auto;
+  width: 25px;
+  height: 25px;
+  border-top: solid 1px var(--accent-color);
+  border-right: solid 1px var(--accent-color);
+}
+
+.rec_element {
+  position: absolute;
+  top: 2px;
+  right: 26px;
+  justify-self: end;
+  margin-block-start: 10px;
+  margin-inline-end: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.rec_element::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border: solid 1px var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 40px;
+  margin-inline-end: 10px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.header__theme-menu-button {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button_type_dark {
+  border: solid 1px var(--accent-color);
+  padding: 1.5px 13px;
+}
+
+h1 {
+  margin-block-start: 65px;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--h1-main-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header-text {
+  margin-block-start: 55px;
+  justify-self: center;
+  margin-inline: 10px;
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+
+.header::after {
+  content: "";
+  display: block;
+  margin-inline-start: 10px;
+  margin-block-start: 30px;
+  margin-block-end: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: solid 1px var(--accent-color);
+  border-left: solid 1px var(--accent-color);
+}
+
+.main-section {
+  margin-inline: var(--margin-inline-main-section);
+  margin-block: 40px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--accent-color);
+}
+
+h4 {
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.pictures-part {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(min-content, max-content);
+}
+
+.picture {
+  max-width: 100%
+}
+
+.footer {
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 83%;
+  color: var(--h1-main-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  margin: 10px 10px 250px auto;
+  width: 25px;
+  height: 25px;
+  border-top: solid 1px var(--accent-color);
+  border-right: solid 1px var(--accent-color);
+}
+
+.footer::after {
+  content: "";
+  display: block;
+  margin: 250px auto 10px 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: solid 1px var(--accent-color);
+  border-left: solid 1px var(--accent-color);
+}
+
+@media (min-width: 768px) {
+  .header__theme-menu-list {
+  margin-top: 192px;
+  margin-left: 678px;
+  }
+
+  .pictures-part {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: fit-content, fit-content, fit-content;
+    grid-template-areas: 
+    "pic-1 pic-1 pic-2"
+    "pic-3 pic-4 pic-2"
+    "pic-3 pic-5 pic-5";
+    /* grid-auto-flow: dense; */
+  }
+
+  .pic-1 {
+    grid-area: pic-1;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .pic-2 {
+    grid-area: pic-2;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .pic-3 {
+    grid-area: pic-3;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .pic-4 {
+    grid-area: pic-4;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .pic-5 {
+    grid-area: pic-5;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+
