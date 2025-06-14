@@ -121,6 +121,18 @@ h1 {
   margin-block: 40px;
 }
 
+.section-1 {
+  display: grid;
+}
+
+.section-2 {
+  display: grid;
+}
+
+.section-3 {
+  display: grid;
+}
+
 h3 {
   font-weight: 700;
   font-size: 18px;
@@ -136,6 +148,9 @@ h4 {
   line-height: 23.4px;
 }
 
+p {
+  color: var(--paragraph-text);
+}
 .pictures-part {
   display: grid;
   gap: 10px;
@@ -176,9 +191,46 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  .header__theme-menu-list {
-  margin-top: 192px;
-  margin-left: 678px;
+  
+  .header::before {
+  content: "";
+  display: block;
+  margin: 20px 20px 0 auto;
+  }
+
+  .rec_element {
+  top: 12px;
+  right: 36px;
+  }
+
+  h1 {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu {
+  margin-block-start: 145px;
+  margin-inline-end: 20px;
+  }
+
+  .header-text {
+    width: 50vw;
+    justify-self: end;
+  }
+
+  .header::after {
+  content: "";
+  display: block;
+  margin-inline-start: 20px;
+  margin-block-start: 138px;
+  margin-block-end: 20px;
+  }
+
+  .section-1 {
+    grid-template-columns: 30% 70%;
+  }
+
+  .section-3 {
+    grid-template-columns: 30% 70%;
   }
 
   .pictures-part {
@@ -222,4 +274,66 @@ h4 {
   }
 }
 
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+    margin-block-start: -50px;
+  }
+  
+  .header__theme-menu-list {
+  display: flex;
+  margin-block-start: 20px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  }
+
+  h1 {
+  margin-block-start: 273px;
+  }
+
+  .header-text {
+  margin-block-start: 114px;
+  }
+
+  .section-2 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+    "no_focus_reason . ."
+    "no_focus_reason_title-1 no_focus_reason_title-2 no_focus_reason_title-3"
+    "no_focus_reason_text-1 no_focus_reason_text-2 no_focus_reason_text-3";
+  }
+
+  .no_focus_reason {
+  grid-area: no_focus_reason;
+  }
+
+  .no_focus_reason_title-1 {
+    grid-area: no_focus_reason_title-1;
+  }
+
+  .no_focus_reason_title-2 {
+    grid-area: no_focus_reason_title-2;
+  }
+
+  .no_focus_reason_title-3 {
+    grid-area: no_focus_reason_title-3;
+  }
+
+  .no_focus_reason_text-1 {
+    grid-area: no_focus_reason_text-1;
+    margin-block-start: -10px;
+  }
+
+  .no_focus_reason_text-2 {
+    grid-area: no_focus_reason_text-2;
+    margin-block-start: -10px;
+  }
+
+  .no_focus_reason_text-3 {
+    grid-area: no_focus_reason_text-3;
+    margin-block-start: -10px;
+  }
+}
 
