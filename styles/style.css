@@ -4,14 +4,15 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: "IBM Plex Mono", sans-serif;
   background-image: var(--background-image);
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .header {
   display: grid;
-  grid-template-rows: 26px, 98px, 1fr, 117px, 25px;
- /*  position: relative; */
+  grid-template-rows: 25px, 100px, 1fr, 120px, 25px;
+  align-items: end;
 }
 
 .header::before {
@@ -26,14 +27,14 @@
 
 .rec_element {
   position: absolute;
-  top: 2px;
-  right: 26px;
+  top: 0;
+  right: 28px;
   justify-self: end;
   margin-block-start: 10px;
   margin-inline-end: 10px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 130%;
   text-transform: uppercase;
   color: var(--accent-color);
 }
@@ -43,7 +44,7 @@
   display: block;
   position: absolute;
   top: 7px;
-  left: 40px;
+  left: 42px;
   width: 10px;
   height: 10px;
   background-color: var(--accent-color);
@@ -52,22 +53,23 @@
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
+
 .header__theme-menu {
   justify-self: end;
-  margin-block-start: 40px;
   margin-inline-end: 10px;
 }
 
 .header__theme-menu-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   justify-items: center;
 }
 
 .header__theme-menu-button {
+  padding: 3px 13px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 100%;
   color: var(--accent-color);
   text-transform: lowercase;
   background-color: transparent;
@@ -76,11 +78,11 @@
 
 .header__theme-menu-button_type_dark {
   border: solid 1px var(--accent-color);
-  padding: 1.5px 13px;
 }
 
 h1 {
   margin-block-start: 65px;
+  margin-inline: 10px;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -96,12 +98,16 @@ h1 {
   color: var(--accent-text);
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 130%;
 }
 
 .title-decor {
   background-color: var(--accent-color);
   color: var(--accent-text);
+}
+
+.title-decor-not_bold {
+  font-weight: 400;
 }
 
 .header::after {
@@ -118,25 +124,32 @@ h1 {
 
 .main-section {
   margin-inline: var(--margin-inline-main-section);
-  margin-block: 40px;
 }
 
 .section-1 {
+  margin-block-start: 40px;
   display: grid;
 }
 
 .section-2 {
+  margin-block-start: 50px;
   display: grid;
 }
 
 .section-3 {
+  margin-block-start: 50px;
+  display: grid;
+}
+
+.section-4 {
+  margin-block-start: 50px;
   display: grid;
 }
 
 h3 {
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 130%;
   color: var(--accent-color);
 }
 
@@ -145,12 +158,45 @@ h4 {
   margin-block-end: 10px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 130%;
+}
+
+h5 {
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.section-4 > h4 {
+  margin-block-start: 0;
 }
 
 p {
   color: var(--paragraph-text);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
 }
+
+p > a {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+p > a:hover {
+  /* text-decoration: underline; */
+  outline: none;
+  border: none;
+  border-bottom: solid 1px var(--paragraph-text);
+
+}
+
+p > a:focus {
+  border: solid 1px var(--paragraph-text);
+}
+
 .pictures-part {
   display: grid;
   gap: 10px;
@@ -162,18 +208,23 @@ p {
 }
 
 .footer {
+  margin-block-start: 40px;
   font-weight: 700;
   font-size: 116px;
   line-height: 83%;
   color: var(--h1-main-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   text-align: center;
+  
 }
 
 .footer::before {
   content: "";
   display: block;
-  margin: 10px 10px 250px auto;
+  margin-inline-start: auto;
+  margin-inline-end: 10px;
+  margin-block-start: 50px;
+  margin-block-end: 250px;
   width: 25px;
   height: 25px;
   border-top: solid 1px var(--accent-color);
@@ -183,15 +234,21 @@ p {
 .footer::after {
   content: "";
   display: block;
-  margin: 250px auto 10px 10px;
+  margin-inline-start: 10px;
+  margin-inline-end: auto;
+  margin-block-start: 250px;
+  margin-block-end: 10px;
   width: 25px;
   height: 25px;
   border-bottom: solid 1px var(--accent-color);
   border-left: solid 1px var(--accent-color);
 }
 
+
+
+
 @media (min-width: 768px) {
-  
+
   .header::before {
   content: "";
   display: block;
@@ -204,16 +261,24 @@ p {
   }
 
   h1 {
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline: 0;
+    margin-block-start: 175px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  h4 {
+    margin-block-start: 20px;
   }
 
   .header__theme-menu {
-  margin-block-start: 145px;
+  margin-block-start: 147px;
   margin-inline-end: 20px;
   }
 
   .header-text {
-    width: 50vw;
+    margin-block-start: 160px;
+    margin-inline-end: 20px;
+    width: 47.5vw;
     justify-self: end;
   }
 
@@ -226,16 +291,45 @@ p {
   }
 
   .section-1 {
-    grid-template-columns: 30% 70%;
+    margin-block-start: 60px;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  /* .section-1-text:first-child {
+    margin-block-start: 0;
+  } */
+
+  .kostyl-1 {
+    margin-block-start: 0;
+  }
+
+  .section-2 {
+    margin-block-start: 80px;
+  }
+
+  .no_focus_reason {
+    width: min-content;
   }
 
   .section-3 {
-    grid-template-columns: 30% 70%;
+    margin-block-start: 80px;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .section-4 {
+    margin-block-start: 80px;
+  }
+  
+  .section-4 h4 {
+    margin-block-end: 20px;
   }
 
   .pictures-part {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: fit-content, fit-content, fit-content;
+    gap: 20px;
     grid-template-areas: 
     "pic-1 pic-1 pic-2"
     "pic-3 pic-4 pic-2"
@@ -272,28 +366,75 @@ p {
     object-fit: cover;
     height: 100%;
   }
+
+  .footer {
+    margin-block-start: 60px;
+    font-size: 120px;
 }
 
+.footer::before {
+  content: "";
+  display: block;
+  margin-inline-start: auto;
+  margin-inline-end: 20px;
+  margin-block-start: 80px;
+  margin-block-end: 417px;
+}
+
+.footer::after {
+  content: "";
+  display: block;
+  margin-inline-start: 20px;
+  margin-inline-end: auto;
+  margin-block-start: 416px;
+  margin-block-end: 20px;
+}
+
+}
+
+
+
 @media (min-width: 1024px) {
+  
+  .header {
+  grid-template-rows: 25px, 1fr, 70px, 25px;
+}
+
   .header__theme-menu {
+    margin: 0;
     justify-self: center;
-    align-self: start;
-    margin-block-start: -50px;
   }
   
   .header__theme-menu-list {
   display: flex;
-  margin-block-start: 20px;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  gap: 10px;
+  margin: 0;
+  margin-block-start: -25px;
   }
 
   h1 {
-  margin-block-start: 273px;
+    margin: 0;
+    margin-block-start: 275px;
   }
 
   .header-text {
-  margin-block-start: 114px;
+    margin: 0;
+    margin-block-start: 112px;
+    margin-inline-end: 20px;
+    width: 48vw;
+  }
+
+  .header::after {
+    margin: 0;
+    margin-block-start: 90px;
+    margin-inline-start: 20px;
+  
+  }
+
+  .section-1 {
+    margin-block-start: 80px;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
   }
 
   .section-2 {
@@ -307,6 +448,7 @@ p {
 
   .no_focus_reason {
   grid-area: no_focus_reason;
+  width: 100%;
   }
 
   .no_focus_reason_title-1 {
@@ -335,5 +477,38 @@ p {
     grid-area: no_focus_reason_text-3;
     margin-block-start: -10px;
   }
+
+  .section-2 h3 {
+  margin: 0;
+}
+
+.section-2 h4 {
+  margin: 0;
+}
+
+.section-3 {
+    gap: 10px; /* надо переделать, должно быть 20 */
+  }
+
+.footer {
+  margin: 0;
+    font-size: 157px;
+}
+
+.footer::before {
+  margin: 0;
+  margin-inline-start: auto;
+  margin-inline-end: 20px;
+  margin-block-start: 80px;
+  margin-block-end: 275px;
+}
+
+.footer::after {
+  margin-inline-start: 20px;
+  margin-inline-end: auto;
+  margin-block-start: 270px;
+  margin-block-end: 20px;
+}
+
 }
 
