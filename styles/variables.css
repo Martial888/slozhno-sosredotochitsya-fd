@@ -7,6 +7,10 @@
   --accent-color: #FF0070;
   --accent-text-color: #000028;
   --header-footer-text-color: #DB00FF;
+  --article-title-color: #000028;
+  --article-text-color: #F1B2CE;
+
+
   --background-image: url(../images/cover-image-dark.png);
 }
 

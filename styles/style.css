@@ -9,6 +9,8 @@
   background-attachment: fixed;
 }
 
+/* Стили хедера, начало: */
+
 .header {
   position: relative;
   padding: 10px;
@@ -94,14 +96,74 @@
   content: "";
   width: 10px;
   height: 10px;
-  background-color: var(--accent-color);
-  border: solid 1px var(--accent-color);
+  background-color: var(--accent-color, #FF0070);
+  border: solid 1px var(--accent-color, #FF0070);
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color, #FF0070);
+}
+/* Стили хедера, конец. */
+
+
+/* Стили основной секции, начало: */
+.main-section {
+  padding: 10px;
+  margin-block-start: 30px;
+  display: grid;
+  gap: 50px;
 }
 
+.section-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--accent-color, #FF0070);
+}
 
+.article-list{
+  display: grid;
+  gap: 20px;
+}
 
+.article {
+  display: grid;
+  gap: 10px;
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--article-title-color, #000028);
+  background-color: var(--accent-color, #FF0070);
+}
+
+.article-title-slim{
+  font-weight: 400;
+}
+
+.article-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--article-text-color, #F1B2CE);
+}
+
+.why-difficult-focus {
+  display: grid;
+  gap: 20px;
+}
+
+.no-focus-reasons {
+  display: grid;
+  gap: 20px;
+}
+
+.how-to-focus {
+  display: grid;
+  gap: 20px;
+}
+
+/* Стили основной секции, конец. */
 
 
 /* backup of 1 version */
