@@ -2,7 +2,27 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
 :root {
+  --accent-color: #FF0070;
+  --accent-text-color: #000028;
+  --header-footer-text-color: #DB00FF;
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+
+
+
+
+
+
+/* backup of 1 version */
+
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+/* :root {
   --h1-main-color: #DB00FF;  
   --accent-color: #ff0070;
   --accent-text: #000028;
@@ -15,4 +35,4 @@
   :root {
     --margin-inline-main-section: 20px;
   }
-}
+} */
