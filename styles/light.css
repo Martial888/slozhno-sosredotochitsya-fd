@@ -40,18 +40,19 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */   
-  --accent-color: #FF8DCB;
-  --accent-text-color: #353430;
-  --header-footer-text-color: #FFC2E6;
-  --article-title-color: #353430;
-  --article-text-color: #353430;
-  --section-title-color: #353430;
-  --decor-corners-color: #353430;
-  --button-color: #353430;
+    --accent-color: #FF8DCB;
+    --accent-text-color: #353430;
+    --header-footer-text-color: #FFC2E6;
+    --article-title-color: #353430;
+    --article-text-color: #353430;
+    --section-title-color: #353430;
+    --decor-corners-color: #353430;
+    --button-color: #353430;
 
-  --background-image: url(../images/cover-image-light.png);
+    --background-image: url(../images/cover-image-light.png);
 
-  .header__rec-element {
-    display: none; 
+    .header__rec-element {
+      display: none; 
+    }
   }
 }
