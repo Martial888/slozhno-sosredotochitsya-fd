@@ -311,7 +311,11 @@
     padding: 20px;
     margin-block-start: 40px;
   }
-}
+
+  /* .test {
+    display: grid;
+    gap: 20px;
+} */
 /* Стили адаптации под планшет, конец */
 
 
@@ -332,22 +336,40 @@
   }
 
   .no-focus-reasons__title {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%; */
-    width: 33%;
+    width: 100%;
   }
 
-  /* .no-focus-reasons__section {
+  .no-focus-reasons > .article-list {
     display: grid;
+    grid-template-rows: min-content 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  } */
+  }
+
+  .multitasking {
+    grid-column-start: 1;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .food {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .gadgets {
+    grid-column-start: 3;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
 
   .how-to-focus {
     gap: 10px;
   }
 
+  .footer__title {
+    font-size: 157px;
+  }
 }
 
 
