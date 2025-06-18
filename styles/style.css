@@ -109,6 +109,7 @@
 /* Стили хедера, конец. */
 
 
+
 /* Стили основной секции, начало: */
 .main-section {
   padding: 10px;
@@ -204,7 +205,126 @@
   color: var(--header-footer-text-color, #DB00FF);
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
-/* Стили футера конец. */
+/* Стили футера, конец. */
+
+
+
+/* Стили адаптации под планшет, начало: */
+@media (min-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header__h1 {
+    justify-self: start;
+    margin-inline-start: -20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__rec-element {
+    top: 20px;
+    right: 48px;
+  }
+
+  .header__theme-text {
+    width: 50%;
+  }
+
+  .main-section {
+    padding: 20px;
+    margin-block-start: 40px;
+    gap: 80px;
+  }
+  
+  .why-difficult-focus {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .no-focus-reasons__title {
+    width: min-content;
+  }
+
+  .how-to-focus {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .picture {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .picture__sunset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .picture__ice-cream {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .picture__tape {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .picture__books {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .picture__street {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .footer {
+    padding: 20px;
+    margin-block-start: 40px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Стили адаптации под планшет, конец */
+
+
 
 
 
