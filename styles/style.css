@@ -36,13 +36,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  color: var(--accent-color);
+  color: var(--button-color);
   text-transform: lowercase;
   background-color: transparent;
 }
 
 .header__theme-menu-button_type_dark {
-  border: solid 1px var(--accent-color);
+  border: solid 1px var(--button-color);
 }
 
 .header__h1 {
@@ -66,8 +66,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-top: solid 1px var(--accent-color);
-  border-right: solid 1px var(--accent-color);
+  border-top: solid 1px var(--decor-corners-color);
+  border-right: solid 1px var(--decor-corners-color);
   top: 10px;
   right: 10px;
 }
@@ -77,8 +77,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-bottom: solid 1px var(--accent-color);
-  border-left: solid 1px var(--accent-color);
+  border-bottom: solid 1px var(--decor-corners-color);
+  border-left: solid 1px var(--decor-corners-color);
   bottom: 10px;
   left: 10px;
 }
@@ -106,6 +106,21 @@
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--accent-color, #FF0070);
 }
+
+.header__theme-menu-button:hover {
+  border-color: var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px var(--accent-color);
+
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
 /* Стили хедера, конец. */
 
 
@@ -122,7 +137,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--accent-color, #FF0070);
+  color: var(--section-title-color, #FF0070);
 }
 
 .article-list{
@@ -182,6 +197,22 @@
 .picture {
   max-width: 100%;
 }
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  text-decoration: none;
+}
+
+.link:hover {
+  outline: none;
+  border: none;
+  border-bottom: solid 1px var(--article-text-color);
+}
+
+.link:focus-visible {
+  outline: solid 1px var(--article-text-color);
+}
+
 /* Стили основной секции, конец. */
 
 
