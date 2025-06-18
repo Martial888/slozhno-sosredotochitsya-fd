@@ -140,7 +140,7 @@
   color: var(--section-title-color, #FF0070);
 }
 
-.article-list{
+.article-list {
   display: grid;
   gap: 20px;
 }
@@ -158,7 +158,7 @@
   background-color: var(--accent-color, #FF0070);
 }
 
-.article-title-slim{
+.article-title-slim {
   font-weight: 400;
 }
 
