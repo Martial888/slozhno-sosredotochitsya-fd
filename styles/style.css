@@ -10,7 +10,6 @@
 }
 
 /* Стили хедера, начало: */
-
 .header {
   position: relative;
   padding: 10px;
@@ -37,7 +36,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
+  color: var(--accent-color);
   text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button_type_dark {
+  border: solid 1px var(--accent-color);
 }
 
 .header__h1 {
@@ -163,7 +168,50 @@
   gap: 20px;
 }
 
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-list {
+  display: grid;
+  gap: 10px;
+}
+
+.picture {
+  max-width: 100%;
+}
 /* Стили основной секции, конец. */
+
+
+
+/* Стили футера начало: */
+.footer {
+  position: relative;
+  padding: 10px;
+  margin-block-start: 30px;
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--header-footer-text-color, #DB00FF);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+}
+/* Стили футера конец. */
+
+
+
+
+
+
+
 
 
 /* backup of 1 version */
