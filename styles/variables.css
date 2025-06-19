@@ -14,5 +14,17 @@
   --button-color: #FF0070;
   --button-hover-color: #FF007066;
 
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-size-common: 18px;
+  --line-height-100: 100%;
+  --line-height-83: 83%;
+  --line-height-130: 130%;
+
+  --padding-10: 10px;
+  --padding-20: 20px;
+  --gap-10: 10px;
+  --gap-20: 20px;
+
   --background-image: url(../images/cover-image-dark.png);
 }

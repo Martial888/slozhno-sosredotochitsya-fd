@@ -3,7 +3,10 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: "IBM Plex Mono", sans-serif;
-  background-image: var(--background-image, url(../images/cover-image-dark.png));
+  background-image: var(
+    --background-image,
+    url(../images/cover-image-dark.png)
+  );
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -12,7 +15,7 @@
 /* Стили хедера, начало: */
 .header {
   position: relative;
-  padding: 10px;
+  padding: var(--padding-10, 10px);
   height: 100vh;
   min-height: 668px;
   display: grid;
@@ -27,15 +30,15 @@
 
 .header__theme-menu-list {
   display: grid;
-  gap: 10px;
+  gap: var(--gap-10, 10px);
 }
 
 .header__theme-menu-button {
   padding: 2px 13px 4px;
   border: solid 1px transparent;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
+  font-weight: var(--font-weight-normal, 400);
+  font-size: var(--font-size-common, 18px);
+  line-height: var(--line-height-100, 100%);
   color: var(--button-color);
   text-transform: lowercase;
   background-color: transparent;
@@ -46,19 +49,19 @@
 }
 
 .header__h1 {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold, 700);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
-  color: var(--header-footer-text-color, #DB00FF);
-  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
+  line-height: var(--line-height-83, 83%);
+  color: var(--header-footer-text-color, #db00ff);
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
 .header__theme-text {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-common, 18px);
+  line-height: var(--line-height-130, 130%);
   color: var(--accent-text-color, #000028);
-  background-color: var(--accent-color, #FF0070);
+  background-color: var(--accent-color, #ff0070);
 }
 
 .decorated-zone::before {
@@ -88,10 +91,10 @@
   top: 10px;
   right: 37px;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--font-weight-normal, 400);
+  font-size: var(--font-size-common, 18px);
   line-height: 25px;
-  color: var(--accent-color, #FF0070);
+  color: var(--accent-color, #ff0070);
 }
 
 .header__rec-element::after {
@@ -101,10 +104,10 @@
   content: "";
   width: 10px;
   height: 10px;
-  background-color: var(--accent-color, #FF0070);
-  border: solid 1px var(--accent-color, #FF0070);
+  background-color: var(--accent-color, #ff0070);
+  border: solid 1px var(--accent-color, #ff0070);
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px var(--accent-color, #FF0070);
+  box-shadow: 0px 0px 4px 2px var(--accent-color, #ff0070);
 }
 
 .header__theme-menu-button:hover {
@@ -115,7 +118,6 @@
   border: none;
   outline: none;
   border-bottom: solid 1px var(--accent-color);
-
 }
 
 .header__theme-menu-button_active {
@@ -123,75 +125,73 @@
 }
 /* Стили хедера, конец. */
 
-
-
 /* Стили основной секции, начало: */
 .main-section {
-  padding: 10px;
+  padding: var(--padding-10, 10px);
   margin-block-start: 30px;
   display: grid;
   gap: 50px;
 }
 
 .section-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--section-title-color, #FF0070);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-common, 18px);
+  line-height: var(--line-height-130, 130%);
+  color: var(--section-title-color, #ff0070);
 }
 
 .article-list {
   display: grid;
-  gap: 20px;
+  gap: var(--gap-20, 20px);
 }
 
 .article {
   display: grid;
-  gap: 10px;
+  gap: var(--gap-10, 10px);
 }
 
 .article-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-common, 18px);
+  line-height: var(--line-height-130, 130%);
   color: var(--article-title-color, #000028);
-  background-color: var(--accent-color, #FF0070);
+  background-color: var(--accent-color, #ff0070);
 }
 
 .article-title-slim {
-  font-weight: 400;
+  font-weight: var(--font-weight-normal, 400);
 }
 
 .article-text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--article-text-color, #F1B2CE);
+  font-weight: var(--font-weight-normal, 400);
+  font-size: var(--font-size-common, 18px);
+  line-height: var(--line-height-130, 130%);
+  color: var(--article-text-color, #f1b2ce);
 }
 
 .why-difficult-focus {
   display: grid;
-  gap: 20px;
+  gap: var(--gap-20, 20px);
 }
 
 .no-focus-reasons {
   display: grid;
-  gap: 20px;
+  gap: var(--gap-20, 20px);
 }
 
 .how-to-focus {
   display: grid;
-  gap: 20px;
+  gap: var(--gap-20, 20px);
 }
 
 .gallery {
   display: grid;
-  gap: 10px;
+  gap: var(--gap-10, 10px);
 }
 
 .gallery-list {
   display: grid;
-  gap: 10px;
+  gap: var(--gap-10, 10px);
 }
 
 .picture {
@@ -199,7 +199,7 @@
 }
 
 .link {
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   text-decoration: none;
 }
 
@@ -215,12 +215,10 @@
 
 /* Стили основной секции, конец. */
 
-
-
 /* Стили футера начало: */
 .footer {
   position: relative;
-  padding: 10px;
+  padding: var(--padding-10, 10px);
   margin-block-start: 30px;
   height: 100vh;
   min-height: 668px;
@@ -230,20 +228,18 @@
 }
 
 .footer__title {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold, 700);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
-  color: var(--header-footer-text-color, #DB00FF);
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  line-height: var(--line-height-83, 83%);
+  color: var(--header-footer-text-color, #db00ff);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 /* Стили футера, конец. */
-
-
 
 /* Стили адаптации под планшет, начало: */
 @media (min-width: 768px) {
   .header {
-    padding: 20px;
+    padding: var(--padding-20, 20px);
   }
 
   .header__h1 {
@@ -272,11 +268,11 @@
   }
 
   .main-section {
-    padding: 20px;
+    padding: var(--padding-20, 20px);
     margin-block-start: 40px;
     gap: 80px;
   }
-  
+
   .why-difficult-focus {
     grid-template-columns: 1fr 2fr;
   }
@@ -290,12 +286,12 @@
   }
 
   .gallery {
-    gap: 20px;
+    gap: var(--gap-20, 20px);
   }
 
   .gallery-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: var(--gap-20, 20px);
   }
 
   .picture {
@@ -339,14 +335,11 @@
   }
 
   .footer {
-    padding: 20px;
+    padding: var(--padding-20, 20px);
     margin-block-start: 40px;
   }
-
-} 
+}
 /* Стили адаптации под планшет, конец */
-
-
 
 /* Стили адаптации под десктоп, начало: */
 @media (min-width: 1024px) {
@@ -360,7 +353,7 @@
   }
 
   .why-difficult-focus {
-    gap: 10px;
+    gap: var(--gap-10, 10px);
   }
 
   .no-focus-reasons__title {
@@ -392,7 +385,7 @@
   }
 
   .how-to-focus {
-    gap: 10px;
+    gap: var(--gap-10, 10px);
   }
 
   .footer__title {
@@ -400,8 +393,11 @@
   }
 }
 
-
 /* Стили адаптации под десктоп, конец. */
+
+
+
+
 
 
 
@@ -415,8 +411,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 /* .page { */
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
- /*  font-family: "IBM Plex Mono", sans-serif;
+/* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+/*  font-family: "IBM Plex Mono", sans-serif;
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
