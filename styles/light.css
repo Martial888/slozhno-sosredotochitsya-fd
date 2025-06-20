@@ -19,6 +19,7 @@
   --button-color: #353430;
 
   --background-image: url(../images/cover-image-light.png);
+  --background-color: #fff1f7;
 
   .header__rec-element {
     display: none;
@@ -51,6 +52,7 @@
     --button-color: #353430;
 
     --background-image: url(../images/cover-image-light.png);
+    --background-color: #fff1f7;
 
     .header__rec-element {
       display: none;

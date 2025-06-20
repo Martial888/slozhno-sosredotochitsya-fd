@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: var(--background-color, #000028);
 }
 
 /* Стили хедера, начало: */
@@ -44,11 +45,17 @@
   background-color: transparent;
 }
 
-.header__theme-menu-button_type_dark {
+ .header__theme-menu-button {
   border: solid 1px var(--button-color);
 }
 
-.header__h1 {
+
+
+/* .header__theme-menu-button_type_dark {
+  border: solid 1px var(--button-color);
+} */
+
+.header__title {
   font-weight: var(--font-weight-bold, 700);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: var(--line-height-83, 83%);
@@ -242,7 +249,7 @@
     padding: var(--padding-20, 20px);
   }
 
-  .header__h1 {
+  .header__title {
     justify-self: start;
     margin-inline-start: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -366,7 +373,18 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .multitasking {
+  .no-focus-reasons .article-list .article {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+  
+  .no-focus-reasons .article-list .article:nth-of-type(1) {
+    grid-column-start: 1;
+  }
+
+  
+
+/*  .multitasking {
     grid-column-start: 1;
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -382,7 +400,7 @@
     grid-column-start: 3;
     display: grid;
     grid-template-rows: min-content 1fr;
-  }
+  } */
 
   .how-to-focus {
     gap: var(--gap-10, 10px);
