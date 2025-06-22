@@ -13,18 +13,18 @@
   --decor-corners-color: #FF0070;
   --button-color: #FF0070;
   --button-hover-color: #FF007066;
+  --button-focus-color: #FF0070;
 
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --font-size-common: 18px;
-  --line-height-100: 100%;
-  --line-height-83: 83%;
-  --line-height-130: 130%;
+  --line-height-small: 83%;
+  --line-height-big: 130%;
 
-  --padding-10: 10px;
-  --padding-20: 20px;
-  --gap-10: 10px;
-  --gap-20: 20px;
+  --padding-small: 10px;
+  --padding-big: 20px;
+  --gap-small: 10px;
+  --gap-big: 20px;
 
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;

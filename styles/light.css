@@ -17,27 +17,20 @@
   --section-title-color: #353430;
   --decor-corners-color: #353430;
   --button-color: #353430;
+  --button-hover-color: #32312D66;
+  --button-focus-color: #353430;
 
   --background-image: url(../images/cover-image-light.png);
   --background-color: #fff1f7;
-
-  .header__rec-element {
-    display: none;
-  }
-
-  .header__theme-menu-button_type_dark {
-    border: none;
-  }
-
-  .header__theme-menu-button_type_light {
-    border: solid 1px var(--button-color);
-  }
 }
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
+.theme-light .header__rec-element {
+  display: none;
+}
 
 @media (prefers-color-scheme: light) {
 :root {
@@ -50,12 +43,15 @@
     --section-title-color: #353430;
     --decor-corners-color: #353430;
     --button-color: #353430;
+    --button-hover-color: #32312D66;
+    --button-focus-color: #353430;
 
     --background-image: url(../images/cover-image-light.png);
     --background-color: #fff1f7;
-
-    .header__rec-element {
-      display: none;
-    }
   }
+
+  .theme-auto .header__rec-element {
+    display: none;
+  }
+
 }
