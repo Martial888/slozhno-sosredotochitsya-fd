@@ -47,6 +47,7 @@
 
  .header__theme-menu-button_active {
   border: solid 1px var(--button-color);
+  pointer-events: none;
 }
 
 .header__title {
@@ -119,10 +120,6 @@
   border: none;
   outline: none;
   border-bottom: solid 1px var(--button-focus-color);
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
 }
 /* Стили хедера, конец. */
 

@@ -33,7 +33,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-:root {
+  :root {
     /* Дублируем переменные светлой темы */   
     --accent-color: #FF8DCB;
     --accent-text-color: #353430;
