@@ -372,26 +372,6 @@
     grid-column-start: 1;
   }
 
-  
-
-/*  .multitasking {
-    grid-column-start: 1;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-  }
-
-  .food {
-    grid-column-start: 2;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-  }
-
-  .gadgets {
-    grid-column-start: 3;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-  } */
-
   .how-to-focus {
     gap: var(--gap-small, 10px);
   }

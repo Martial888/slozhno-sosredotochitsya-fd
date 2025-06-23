@@ -19,12 +19,13 @@
   --decor-corners-color: #FF0070;
   --button-color: #FF0070;
   --button-hover-color: #FF007066;
+  --button-focus-color: #FF0070;
 
   --background-image: url(../images/cover-image-dark.png);
+  --background-color: #000028;
 }
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-  
